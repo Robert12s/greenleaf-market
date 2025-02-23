@@ -1,2 +1,9 @@
+# Enable PHP (if not already enabled)
+AddHandler application/x-httpd-php .php
+
+# Specify DirectoryIndex
+DirectoryIndex index.php index.html index.htm
+
+# Optionally, enable mod_rewrite for clean URLs
 RewriteEngine On
-RewriteRule ^greenleafmarket$ /index.php [L]
+RewriteRule ^(.*)$ index.php [L]

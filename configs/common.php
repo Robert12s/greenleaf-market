@@ -8,7 +8,7 @@
 namespace MyProject;
 
 require_once __DIR__ . '/../inc/smarty/libs/Smarty.class.php';
-use Smarty;
+use Smarty\Smarty;
 
 class Common {
     protected $smarty;
@@ -17,7 +17,7 @@ class Common {
         $this->smarty = new Smarty();
 
         // Set Smarty directories
-        $this->smarty->setTemplateDir(__DIR__ . '/templates/');
+        $this->smarty->setTemplateDir(__DIR__ . '/../templates/');  // Root templates folder
         $this->smarty->setCompileDir(__DIR__ . '/templates_c/');
         $this->smarty->setCacheDir(__DIR__ . '/cache/');
         $this->smarty->setConfigDir(__DIR__ . '/configs/');

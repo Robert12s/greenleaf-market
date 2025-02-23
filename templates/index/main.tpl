@@ -1,6 +1,5 @@
 {include file='page/header.tpl'}
-
-<div style="background-color: #EDEDED;">
+<div class="container">
     <h1>Main test</h1>
 
 </div>

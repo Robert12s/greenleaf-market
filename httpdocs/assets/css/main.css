@@ -1,0 +1,24 @@
+.bg-dark{
+    background-color: #999999 !important;
+}
+
+.bg-black{
+    background-color: #1F1F1F !important;
+}
+
+.bg-primary{
+    background-color: #33843a !important;
+}
+
+.bg-secondary{
+    background-color: #ededed !important;
+}
+
+.bg-accent{
+    background-color: #859376 !important;
+}
+
+.btn-primary{
+    background-color: #33843a !important;
+    border-color: #33843a !important;
+}

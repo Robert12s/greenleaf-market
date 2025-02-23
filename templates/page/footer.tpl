@@ -1,3 +1,5 @@
-<footer class="text-white" style="background-color: #181818; position: fixed; bottom: 0; width: 100%;">
-    <h1>footer</h1>
+<footer class="text-white bg-black fixed-bottom">
+    <div class="container">
+        <h1>footer</h1>
+    </div>
 </footer>

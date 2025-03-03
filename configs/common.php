@@ -17,7 +17,7 @@ class Common {
         $this->smarty = new Smarty();
 
         // Set Smarty directories
-        $this->smarty->setTemplateDir(__DIR__ . '/../templates/');  // Root templates folder
+        $this->smarty->setTemplateDir(__DIR__ . '/../templates/');
         $this->smarty->setCompileDir(__DIR__ . '/templates_c/');
         $this->smarty->setCacheDir(__DIR__ . '/cache/');
         $this->smarty->setConfigDir(__DIR__ . '/configs/');
@@ -29,5 +29,20 @@ class Common {
 
     public function display($template) {
         $this->smarty->display($template);
+    }
+
+    public function get($endpoint) {
+        $apiUrl = "http://localhost/API/index.php/" . $endpoint;
+        // Initialize cURL session
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $apiUrl);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        
+        // Execute the API call and store the response
+        $response = curl_exec($ch);
+        curl_close($ch);
+
+        // Decode and return the response data
+        return json_decode($response, true);
     }
 }

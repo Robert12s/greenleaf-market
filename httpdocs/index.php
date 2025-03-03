@@ -17,7 +17,13 @@
         }
     
         public function init() {
+            // Fetch products data from the API
+            $products = $this->get('products');
 
+            die($products);
+        
+            // Assign products to Smarty template
+            $this->products = $products;
         }
     
         public function proccess() {

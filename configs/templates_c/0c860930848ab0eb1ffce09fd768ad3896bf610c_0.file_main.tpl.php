@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-03-03 16:30:57
+/* Smarty version 5.4.3, created on 2025-03-03 16:43:26
   from 'file:index/main.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_67c5d941382972_51277983',
+  'unifunc' => 'content_67c5dc2e4eccf0_65712798',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0c860930848ab0eb1ffce09fd768ad3896bf610c' => 
     array (
       0 => 'index/main.tpl',
-      1 => 1741019454,
+      1 => 1741019461,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:page/footer.tpl' => 1,
   ),
 ))) {
-function content_67c5d941382972_51277983 (\Smarty\Template $_smarty_tpl) {
+function content_67c5dc2e4eccf0_65712798 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\repos\\greenleaf-market\\templates\\index';
 $_smarty_tpl->renderSubTemplate('file:page/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>

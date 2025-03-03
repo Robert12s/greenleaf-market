@@ -32,7 +32,7 @@ class Common {
     }
 
     public function get($endpoint) {
-        $apiUrl = "http://localhost/API/index.php/" . $endpoint;
+        $apiUrl = "http://local.greenleafmarket/api/index.php/" . $endpoint;
         // Initialize cURL session
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $apiUrl);

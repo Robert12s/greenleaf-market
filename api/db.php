@@ -16,7 +16,8 @@ class Database {
 
     public static function getConnection() {
         if (self::$connection === null) {
-            self::$connection = new mysqli("localhost", "root", "", "greenleaf");
+            // Include the port 3307 in the connection parameters
+            self::$connection = new mysqli("localhost", "root", "", "greenleaf", 3307);
 
             if (self::$connection->connect_error) {
                 die("Database connection failed: " . self::$connection->connect_error);
@@ -26,3 +27,4 @@ class Database {
     }
 }
 ?>
+

@@ -18,8 +18,8 @@ class Common {
 
         // Set Smarty directories
         $this->smarty->setTemplateDir(__DIR__ . '/../templates/');
-        $this->smarty->setCompileDir(__DIR__ . '/templates_c/');
-        $this->smarty->setCacheDir(__DIR__ . '/cache/');
+        $this->smarty->setCompileDir(__DIR__ . '/../templates_c/');
+        $this->smarty->setCacheDir(__DIR__ . '/../cache/');
         $this->smarty->setConfigDir(__DIR__ . '/configs/');
     }
 

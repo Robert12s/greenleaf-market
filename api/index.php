@@ -8,9 +8,9 @@
 namespace MyProject\API;
 
 require_once __DIR__ . '/db.php';
-require_once __DIR__ . '/Users.php';
-require_once __DIR__ . '/Products.php';
-require_once __DIR__ . '/Categories.php';
+require_once __DIR__ . '/users.php';
+require_once __DIR__ . '/products.php';
+require_once __DIR__ . '/categories.php';
 
 use MyProject\API\Database;
 use MyProject\API\Users;
@@ -26,11 +26,16 @@ header("Access-Control-Allow-Headers: Content-Type");
 $conn = Database::getConnection();
 
 // Get request details
-$request_uri = explode('/', trim($_SERVER['REQUEST_URI'], '/'));
-$resource = isset($request_uri[1]) ? $request_uri[1] : null; // e.g., "users", "products"
+$request_uri = explode('/', trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/'));
+$resource = isset($request_uri[2]) ? $request_uri[2] : null; // Use the correct index (2) for 'products'
 $id = isset($_GET['id']) ? intval($_GET['id']) : null;
 $method = $_SERVER['REQUEST_METHOD'];
 
+// Debug logs
+error_log("Requested URI: " . $_SERVER['REQUEST_URI']);
+error_log("Resource: " . $resource);
+
+// Check if resource is valid
 $validResources = [
     'users' => Users::class,
     'products' => Products::class,
